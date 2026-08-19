@@ -2,4 +2,4 @@
 
 Cronograma diário de acompanhamento do projeto — agosto de 2026.
 
-Acesse em: https://samuel-silva.github.io/cronograma-projeto
+Acesse em: https://samuelsilva0001.github.io/cronograma-projeto
