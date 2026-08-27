@@ -195,6 +195,24 @@ body {
 .stat-val { font-family: Georgia, serif; font-size: 18px; font-weight: bold; color: var(--text-2); line-height: 1; }
 .stat-lbl { font-size: 10px; color: var(--text-3); text-transform: uppercase; letter-spacing: .07em; }
 
+/* ── Reestruturação de escopo ── */
+.day.restructure {
+  border-left-color: #9B1C1C;
+  background: #FFF5F5;
+  box-shadow: 0 0 0 2px #9B1C1C, 0 4px 16px rgba(155,28,28,.12);
+}
+.day.restructure .day-title { color: #9B1C1C; font-weight: 700; }
+.day.restructure .day-desc  { color: #5C1C1C; }
+.day.restructure .day-date  { border-right-color: #F5C0C0; }
+.day.restructure .day-num   { color: #9B1C1C; }
+.restructure-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11px; font-weight: 700; letter-spacing: .05em;
+  text-transform: uppercase; color: #9B1C1C;
+  background: #FFE4E4; border: 1px solid #F5C0C0;
+  padding: 3px 10px; border-radius: 4px; margin-bottom: 6px;
+}
+
 /* ─── RESPONSIVE ────────────────────────────────────────────── */
 @media (max-width: 600px) {
   .header   { padding: 24px 18px 20px; }
@@ -527,23 +545,41 @@ body {
   </div>
 
   <!-- 25/08 -->
-  <div class="day blank">
+  <div class="day filled">
     <div class="day-date">
       <span class="day-num">25</span>
       <span class="day-month">AGO</span>
       <span class="day-wday">Ter</span>
     </div>
-    <div class="day-body"><div class="day-title">A definir</div></div>
+    <div class="day-body">
+      <div class="day-title">Mapeamento de datas de criação e subcontratação no SAP Fiori</div>
+      <div class="day-desc">Solicitado buscar no SAP Fiori a data de criação e a data de subcontratação. Realizado o mapeamento dessas informações para disponibilização em outra agenda.</div>
+      <div class="day-tags">
+        <span class="tag tag-people">SAP Fiori</span>
+        <span class="tag" style="background:var(--c-filled-bg);color:var(--c-filled)">✓ Mapeamento concluído</span>
+      </div>
+    </div>
   </div>
 
   <!-- 26/08 -->
-  <div class="day blank">
+  <div class="day restructure">
     <div class="day-date">
       <span class="day-num">26</span>
       <span class="day-month">AGO</span>
       <span class="day-wday">Qua</span>
     </div>
-    <div class="day-body"><div class="day-title">A definir</div></div>
+    <div class="day-body">
+      <div class="restructure-badge">⚠ Reestruturação de escopo</div>
+      <div class="day-title">Mudança de escopo — reagendamentos linha a linha</div>
+      <div class="day-desc">
+        Realizado teste com um ID de agendamento para visualizar o ciclo completo de todas as datas mapeadas. A colaboradora indicou que cada motivo de reagendamento deverá ser exibido linha a linha, porém o projeto foi construído com a última data de reagendamento visível em tela, acrescida de uma coluna com o histórico consolidado de datas e motivos.<br><br>
+        Como a colaboradora solicitou uma mudança de escopo para exibição linha a linha de cada reagendamento, será necessário remodelar a estrutura do projeto.
+      </div>
+      <div class="day-tags">
+        <span class="tag" style="background:#FFE4E4;color:#9B1C1C;border:1px solid #F5C0C0;">Impacto: remodelagem da estrutura</span>
+        <span class="tag tag-pending">⏳ Remodelagem do projeto em andamento</span>
+      </div>
+    </div>
   </div>
 
   <!-- 27/08 -->
@@ -599,7 +635,7 @@ body {
 <!-- ── FOOTER ─────────────────────────────────────── -->
 <footer>
   <div class="footer">
-    <span class="footer-note">Atualizado em 24.08.2026</span>
+    <span class="footer-note">Atualizado em 26.08.2026</span>
     <div class="stats">
       <div class="stat">
         <div class="stat-val">26</div>
@@ -610,7 +646,7 @@ body {
         <div class="stat-lbl">Dias úteis</div>
       </div>
       <div class="stat">
-        <div class="stat-val">12</div>
+        <div class="stat-val">14</div>
         <div class="stat-lbl">Registrados</div>
       </div>
     </div>
